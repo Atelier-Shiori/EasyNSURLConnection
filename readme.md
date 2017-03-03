@@ -1,0 +1,42 @@
+# EasyNSURLConnection
+
+EasyNSURLConnection is a simple framework that allows one to easily create synchronous http requests. While this is not recommended since it freezes the application while a request is being made, sometimes making an asynchronous connection can make things too complicated.
+
+This class uses NSURLSession as a replacement for "sendSynchronousRequest:returningResponse:error:".
+
+
+##How to Build
+1. You will need Xcode 4.2 or later for C++11 support
+2. Clone the repo
+3. Type xcodebuild to build the project
+
+##How to use 
+###Objective C
+1. Copy the framework to your XCode Project
+2. Add this to the header file.
+```objective-c
+#import <EasyNSURLConnection/EasyNSURLConnectionClass.h>
+```
+
+To use, simply do the following:
+```objective-c
+	// Create a request
+	NSURL *url = [NSURL URLWithString:@"%https://google.com];
+    //Ignore Cookies
+    [request setUseCookies:NO];
+	// Add Form Data
+	[request addFormData:@"SomeData" forKey:@"Data"];
+	// Start Form Request
+	[request startFormRequest];
+	if ([request getStatusCode] == 200){
+		NSLog(@"%@", [request getResponseData]);
+	}
+	else{
+		NSLog(@"Error: %@", [request getError]);
+	}
+	
+```
+
+## License
+
+EasyNSURLConnection is licensed under MIT License.
