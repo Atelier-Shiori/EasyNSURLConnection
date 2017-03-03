@@ -21,7 +21,7 @@ This class uses NSURLSession as a replacement for "sendSynchronousRequest:return
 To use, simply do the following:
 ```objective-c
 	// Create a request
-	NSURL *url = [NSURL URLWithString:@"%https://google.com];
+	NSURL *url = [NSURL URLWithString:@"https://google.com"];
     //Ignore Cookies
     [request setUseCookies:NO];
 	// Add Form Data
