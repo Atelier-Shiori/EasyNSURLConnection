@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D27A4501E6A15FD00D4C63B /* EasyNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D27A44D1E6A15FD00D4C63B /* EasyNSURLConnection.h */; };
+		2D27A4501E6A15FD00D4C63B /* EasyNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D27A44D1E6A15FD00D4C63B /* EasyNSURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D27A4511E6A15FD00D4C63B /* EasyNSURLConnectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D27A44E1E6A15FD00D4C63B /* EasyNSURLConnectionClass.h */; };
 		2D27A4521E6A15FD00D4C63B /* EasyNSURLConnectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D27A44F1E6A15FD00D4C63B /* EasyNSURLConnectionClass.m */; };
-		2D9C3AE61E6A0D00007D8F68 /* EasyNSURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9C3AE41E6A0D00007D8F68 /* EasyNSURLResponse.h */; };
+		2D9C3AE61E6A0D00007D8F68 /* EasyNSURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9C3AE41E6A0D00007D8F68 /* EasyNSURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D9C3AE71E6A0D00007D8F68 /* EasyNSURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C3AE51E6A0D00007D8F68 /* EasyNSURLResponse.m */; };
 /* End PBXBuildFile section */
 
