@@ -6,7 +6,7 @@ This class uses NSURLSession as a replacement for "sendSynchronousRequest:return
 
 
 ##How to Build
-1. You will need Xcode 4.2 or later for C++11 support
+1. You will need Xcode 8 or later to build this project
 2. Clone the repo
 3. Type xcodebuild to build the project
 
@@ -36,7 +36,7 @@ To use, simply do the following:
 	}
 	
 ```
-
+Documentation is coming soon.
 ## License
 
 EasyNSURLConnection is licensed under MIT License.
