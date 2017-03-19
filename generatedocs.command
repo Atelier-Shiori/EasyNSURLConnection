@@ -10,5 +10,5 @@ jazzy \
   --module-version 1.0 \
   --xcodebuild-arguments --objc,EasyNSURLConnection/EasyNSURLConnectionClass.h,--,-x,objective-c,-isysroot,$(xcrun --show-sdk-path),-I,$(pwd) \
   --module EasyNSURLConnection \
-  --root-url https://atelier-shiori.github.io/EasyNSURLConnection/ \
+  --root-url https://developer.ateliershiori.moe/easynsurlconnection/ \
   --output docs/

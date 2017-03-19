@@ -37,6 +37,8 @@ To use, simply do the following:
 	}
 	
 ```
+## Documentation
+Documentation can be viewed [here](https://developer.ateliershiori.moe/easynsurlconnection/index.html)
 
 ## License
 
