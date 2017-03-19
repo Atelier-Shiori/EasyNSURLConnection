@@ -5,13 +5,13 @@ EasyNSURLConnection is a simple framework that allows one to easily create synch
 This class uses NSURLSession as a replacement for "sendSynchronousRequest:returningResponse:error:".
 
 
-##How to Build
+## How to Build
 1. You will need Xcode 8 or later to build this project
 2. Clone the repo
 3. Type xcodebuild to build the project
 
-##How to use 
-###Objective C
+## How to use 
+### Objective C
 1. Copy the framework to your XCode Project
 2. Add this to the header file.
 ```objective-c
@@ -22,6 +22,7 @@ To use, simply do the following:
 ```objective-c
 	// Create a request
 	NSURL *url = [NSURL URLWithString:@"https://google.com"];
+    EasyNSURLConnection *request = [[EasyNSURLConnection alloc] initWithURL:url];
     //Ignore Cookies
     [request setUseCookies:NO];
 	// Add Form Data
@@ -36,7 +37,7 @@ To use, simply do the following:
 	}
 	
 ```
-Documentation is coming soon.
+
 ## License
 
 EasyNSURLConnection is licensed under MIT License.

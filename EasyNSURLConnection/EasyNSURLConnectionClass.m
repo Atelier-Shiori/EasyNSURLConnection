@@ -1,9 +1,8 @@
 //
-//  EasyNSURLConnection.m
-//  MAL Updater OS X
+//  EasyNSURLConnectionClass.m
 //
 //  Created by Nanoha Takamachi on 2014/11/25.
-//  Copyright (c) 2014年 Atelier Shiori.
+//  Copyright (c) 2014年 Atelier Shiori. Licensed under MIT License.
 //
 //  This class allows easy creation of synchronous request using NSURLSession
 //
@@ -14,6 +13,12 @@
 @implementation EasyNSURLConnection
 @synthesize error;
 @synthesize response;
+
+#pragma Post Methods Constants
+NSString * const EasyNSURLPostMethod = @"POST";
+NSString * const EasyNSURLPutMethod = @"PUT";
+NSString * const EasyNSURLPatchMethod = @"PATCH";
+NSString * const EasyNSURLDeleteMethod = @"DELETE";
 
 #pragma constructors
 -(id)init{
@@ -32,6 +37,9 @@
 -(NSString *)getResponseDataString{
     NSString * datastring = [[NSString alloc] initWithData:responsedata encoding:NSUTF8StringEncoding];
     return datastring;
+}
+-(id)getResponseDataJsonParsed{
+    return [NSJSONSerialization JSONObjectWithData:responsedata options:0 error:nil];
 }
 -(long)getStatusCode{
     return response.statusCode;
@@ -135,7 +143,7 @@
     error = [urlsessionresponse getError];
     response = [urlsessionresponse getResponse];
 }
--(void)startJSONRequest:(NSString *)body{
+-(void)startJSONRequest:(NSString *)body type:(int)bodytype{
     // Send a synchronous request
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
     // Set Method
@@ -145,7 +153,14 @@
     else
         [request setHTTPMethod:@"POST"];
     // Set content type to form data
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    switch (bodytype){
+        case 0:
+            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            break;
+        case 1:
+            [request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
+            break;
+    }
     // Do not use Cookies
     [request setHTTPShouldHandleCookies:usecookies];
     // Set User Agent
@@ -170,7 +185,7 @@
     error = [urlsessionresponse getError];
     response = [urlsessionresponse getResponse];
 }
--(void)startJSONFormRequest{
+-(void)startJSONFormRequest:(int)bodytype{
     // Send a synchronous request
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
     // Set Method
@@ -180,7 +195,14 @@
     else
         [request setHTTPMethod:@"POST"];
     // Set content type to form data
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    switch (bodytype){
+        case 0:
+            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            break;
+        case 1:
+            [request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
+            break;
+    }
     // Do not use Cookies
     request.HTTPShouldHandleCookies = usecookies;
     // Set User Agent
@@ -211,7 +233,6 @@
     error = [urlsessionresponse getError];
     response = [urlsessionresponse getResponse];
 }
-
 
 #pragma helpers
 - (NSData*)encodeArraywithDictionaries:(NSArray*)array {
