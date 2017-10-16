@@ -10,9 +10,11 @@
 #import "EasyNSURLConnection.h"
 #import "EasyNSURLResponse.h"
 
+@interface EasyNSURLConnection ()
+@property (strong) NSMutableURLRequest *request;
+@end
+
 @implementation EasyNSURLConnection
-@synthesize error;
-@synthesize response;
 
 #pragma Post Methods Constants
 NSString * const EasyNSURLPostMethod = @"POST";
@@ -21,249 +23,204 @@ NSString * const EasyNSURLPatchMethod = @"PATCH";
 NSString * const EasyNSURLDeleteMethod = @"DELETE";
 
 #pragma constructors
--(id)init{
+-(id)init {
     // Set Default User Agent
-    useragent =[NSString stringWithFormat:@"%@ %@ (Macintosh; Mac OS X %@; %@)", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"],[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"] objectForKey:@"ProductVersion"], [[NSLocale currentLocale] localeIdentifier]];
+    _useragent =[NSString stringWithFormat:@"%@ %@ (Macintosh; Mac OS X %@; %@)", [NSBundle mainBundle].infoDictionary[@"CFBundleName"],[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"], [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"][@"ProductVersion"], [NSLocale currentLocale].localeIdentifier];
     return [super init];
 }
--(id)initWithURL:(NSURL *)address{
-    URL = address;
+-(id)initWithURL:(NSURL *)address {
+    _URL = address;
     return [self init];
 }
 #pragma getters
--(NSData *)getResponseData{
-    return responsedata;
-}
--(NSString *)getResponseDataString{
-    NSString * datastring = [[NSString alloc] initWithData:responsedata encoding:NSUTF8StringEncoding];
+-(NSString *)getResponseDataString {
+    NSString *datastring = [[NSString alloc] initWithData:_responsedata encoding:NSUTF8StringEncoding];
     return datastring;
 }
--(id)getResponseDataJsonParsed{
-    return [NSJSONSerialization JSONObjectWithData:responsedata options:0 error:nil];
+-(id)getResponseDataJsonParsed {
+    return [NSJSONSerialization JSONObjectWithData:_responsedata options:0 error:nil];
 }
--(long)getStatusCode{
-    return response.statusCode;
-}
--(NSError *)getError{
-    return error;
+-(long)getStatusCode {
+    return _response.statusCode;
 }
 #pragma mutators
 -(void)addHeader:(id)object
-          forKey:(NSString *)key{
+          forKey:(NSString *)key {
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
-    if (formdata == nil) {
+    if (_formdata == nil) {
         //Initalize Header Data Array
-        headers = [[NSMutableArray alloc] init];
+        _headers = [NSMutableDictionary new];
     }
-    [headers addObject:[NSDictionary dictionaryWithObjectsAndKeys:object,key, nil]];
+    [_headers setObject:object forKey:key];
     [lock unlock]; //Finished operation, unlock
 }
 -(void)addFormData:(id)object
             forKey:(NSString *)key{
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
-    if (formdata == nil) {
+    if (_formdata == nil) {
         //Initalize Form Data Array
-        formdata = [[NSMutableArray alloc] init];
+        _formdata = [NSMutableDictionary new];
     }
-    [formdata addObject:[NSDictionary dictionaryWithObjectsAndKeys:object,key, nil]];
+    [_formdata setObject:object forKey:key];
     [lock unlock]; //Finished operation, unlock
 }
--(void)setUserAgent:(NSString *)string{
-    useragent = [NSString stringWithFormat:@"%@",string];
-}
--(void)setUseCookies:(BOOL)choice{
-    usecookies = choice;
-}
--(void)setURL:(NSURL *)address{
-    URL = address;
-}
--(void)setPostMethod:(NSString *)method{
-    postmethod = method;
-}
 #pragma request functions
--(void)startRequest{
+-(void)startRequest {
     // Send a synchronous request
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
+    _request = [NSMutableURLRequest requestWithURL:_URL];
     // Do not use Cookies
-    [request setHTTPShouldHandleCookies:usecookies];
+    _request.HTTPShouldHandleCookies = _usecookies;
     // Set Timeout
-    [request setTimeoutInterval:15];
+    _request.timeoutInterval = 15;
     // Set User Agent
-    [request setValue:useragent forHTTPHeaderField:@"User-Agent"];
+    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
     // Set Other headers, if any
-    if (headers != nil) {
-        for (NSDictionary *d in headers ) {
-            //Set any headers
-            [request setValue:[[d allValues] objectAtIndex:0]forHTTPHeaderField:[[d allKeys] objectAtIndex:0]];
-        }
-    }
+    [self setAllHeaders];
     [lock unlock];
     // Send Request
-    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest:request];
-    responsedata = [urlsessionresponse getData];
-    error = [urlsessionresponse getError];
-    response = [urlsessionresponse getResponse];
+    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest];
+    _responsedata = urlsessionresponse.responsedata;
+    _error = urlsessionresponse.error;
+    _response = urlsessionresponse.response;
 }
--(void)startFormRequest{
+-(void)startFormRequest {
     // Send a synchronous request
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
+    _request = [NSMutableURLRequest requestWithURL:_URL];
     // Set Method
-    if (postmethod.length != 0) {
-        [request setHTTPMethod:postmethod];
+    if (_postmethod.length != 0) {
+        _request.HTTPMethod = _postmethod;
     }
-    else
-        [request setHTTPMethod:@"POST"];
+    else {
+        _request.HTTPMethod = @"POST";
+    }
     // Set content type to form data
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [_request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     // Do not use Cookies
-    [request setHTTPShouldHandleCookies:usecookies];
+    _request.HTTPShouldHandleCookies = _usecookies;
     // Set User Agent
-    [request setValue:useragent forHTTPHeaderField:@"User-Agent"];
+    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
     // Set Timeout
-    [request setTimeoutInterval:15];
+    _request.timeoutInterval = 15;
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
     //Set Post Data
-    [request setHTTPBody:[self encodeArraywithDictionaries:formdata]];
+    _request.HTTPBody = [self encodeDictionaries:_formdata];
     // Set Other headers, if any
-    if (headers != nil) {
-        for (NSDictionary *d in headers ) {
-            //Set any headers
-            [request setValue:[[d allValues] objectAtIndex:0]forHTTPHeaderField:[[d allKeys] objectAtIndex:0]];
-        }
-    }
+    [self setAllHeaders];
     [lock unlock];
     // Send Request
-    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest:request];
-    responsedata = [urlsessionresponse getData];
-    error = [urlsessionresponse getError];
-    response = [urlsessionresponse getResponse];
+    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest];
+    _responsedata = urlsessionresponse.responsedata;
+    _error = urlsessionresponse.error;
+    _response = urlsessionresponse.response;
 }
--(void)startJSONRequest:(NSString *)body type:(int)bodytype{
+-(void)startJSONRequest:(NSString *)body type:(int)bodytype {
     // Send a synchronous request
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
+    _request = [NSMutableURLRequest requestWithURL:_URL];
     // Set Method
-    if (postmethod.length != 0) {
-        [request setHTTPMethod:postmethod];
+    if (_postmethod.length != 0) {
+        _request.HTTPMethod = _postmethod;
     }
-    else
-        [request setHTTPMethod:@"POST"];
+    else {
+        _request.HTTPMethod = @"POST";
+    }
     // Set content type to form data
     switch (bodytype){
         case 0:
-            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [_request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             break;
         case 1:
-            [request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
+            [_request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
             break;
     }
     // Do not use Cookies
-    [request setHTTPShouldHandleCookies:usecookies];
+    _request.HTTPShouldHandleCookies = _usecookies;
     // Set User Agent
-    [request setValue:useragent forHTTPHeaderField:@"User-Agent"];
+    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
     // Set Timeout
-    [request setTimeoutInterval:5];
+    _request.timeoutInterval = 5;
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
     //Set Post Data
-    [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    _request.HTTPBody = [body dataUsingEncoding:NSUTF8StringEncoding];
     // Set Other headers, if any
-    if (headers != nil) {
-        for (NSDictionary *d in headers ) {
-            //Set any headers
-            [request setValue:[[d allValues] objectAtIndex:0]forHTTPHeaderField:[[d allKeys] objectAtIndex:0]];
-        }
-    }
+    [self setAllHeaders];
     [lock unlock];
     // Send Request
-    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest:request];
-    responsedata = [urlsessionresponse getData];
-    error = [urlsessionresponse getError];
-    response = [urlsessionresponse getResponse];
+    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest];
+    _responsedata = urlsessionresponse.responsedata;
+    _error = urlsessionresponse.error;
+    _response = urlsessionresponse.response;
 }
--(void)startJSONFormRequest:(int)bodytype{
+-(void)startJSONFormRequest:(int)bodytype {
     // Send a synchronous request
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:URL];
+    _request = [NSMutableURLRequest requestWithURL:_URL];
     // Set Method
-    if (postmethod.length != 0) {
-        [request setHTTPMethod:postmethod];
+    if (_postmethod.length != 0) {
+        _request.HTTPMethod = _postmethod;
     }
-    else
-        [request setHTTPMethod:@"POST"];
+    else {
+        _request.HTTPMethod = @"POST";
+    }
     // Set content type to form data
     switch (bodytype){
         case 0:
-            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [_request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             break;
         case 1:
-            [request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
+            [_request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
             break;
     }
     // Do not use Cookies
-    request.HTTPShouldHandleCookies = usecookies;
+    _request.HTTPShouldHandleCookies = _usecookies;
     // Set User Agent
-    [request setValue:useragent forHTTPHeaderField:@"User-Agent"];
+    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
     // Set Timeout
-    request.timeoutInterval = 5;
+    _request.timeoutInterval = 5;
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     [lock lock];
     //Set Post Data
     NSError *jerror;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self arraytodictionary:formdata] options:0 error:&jerror];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:_formdata options:0 error:&jerror];
     if (!jsonData) {}
     else{
         NSString *JSONString = [[NSString alloc] initWithBytes:jsonData.bytes length:jsonData.length encoding:NSUTF8StringEncoding];
-        request.HTTPBody = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+        _request.HTTPBody = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
     }
     // Set Other headers, if any
-    if (headers != nil) {
-        for (NSDictionary *d in headers ) {
-            //Set any headers
-            [request setValue:d.allValues[0]forHTTPHeaderField:d.allKeys[0]];
-        }
-    }
+    [self setAllHeaders];
     [lock unlock];
     // Send Request
-    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest:request];
-    responsedata = [urlsessionresponse getData];
-    error = [urlsessionresponse getError];
-    response = [urlsessionresponse getResponse];
+    EasyNSURLResponse * urlsessionresponse = [self performNSURLSessionRequest];
+    _responsedata = urlsessionresponse.responsedata;
+    _error = urlsessionresponse.error;
+    _response = urlsessionresponse.response;
 }
 
 #pragma helpers
-- (NSData*)encodeArraywithDictionaries:(NSArray*)array {
+- (NSData*)encodeDictionaries:(NSDictionary *)dic {
     NSMutableArray *parts = [[NSMutableArray alloc] init];
-    for (NSDictionary * d in array) {
-        NSString *encodedValue = [[d objectForKey:[[d allKeys] objectAtIndex:0]] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
-        NSString *encodedKey = [[[d allKeys] objectAtIndex:0] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    for (NSString *key in dic.allKeys) {
+        NSString *encodedValue = [dic[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        NSString *encodedKey = [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
         NSString *part = [NSString stringWithFormat: @"%@=%@", encodedKey, encodedValue];
         [parts addObject:part];
     }
     NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
     return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
 }
--(NSDictionary *)arraytodictionary:(NSArray *)array{
-    NSMutableDictionary * doutput = [NSMutableDictionary new];
-    for (NSDictionary * d in array) {
-        NSString * akey = d.allKeys[0];
-        NSString *acontent = d[d.allKeys[0]];
-        doutput[akey] = acontent;
-    }
-    return doutput;
-}
--(EasyNSURLResponse *)performNSURLSessionRequest:(NSURLRequest *)request
-{
+-(EasyNSURLResponse *)performNSURLSessionRequest {
     // Based on http://demianturner.com/2016/08/synchronous-nsurlsession-in-obj-c/
     __block NSHTTPURLResponse *urlresponse = nil;
     __block NSData *data = nil;
     __block NSError * error2 = nil;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
         data = taskData;
         urlresponse = (NSHTTPURLResponse *)rresponse;
         error2 = eerror;
@@ -273,5 +230,13 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [dataTask resume];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return [[EasyNSURLResponse alloc] initWithData:data withResponse:urlresponse withError:error2];
+}
+- (void)setAllHeaders {
+    if (_headers != nil) {
+        for (NSString *key in _headers.allKeys ) {
+            //Set any headers
+            [_request setValue:_headers[key] forHTTPHeaderField:key];
+        }
+    }
 }
 @end
