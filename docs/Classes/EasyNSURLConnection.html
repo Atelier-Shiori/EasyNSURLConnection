@@ -14,7 +14,7 @@
     <a title="EasyNSURLConnection Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">EasyNSURLConnection Docs</a> (94% documented)</p>
+        <p><a href="../index.html">EasyNSURLConnection Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/Atelier-Shiori/EasyNSURLConnection"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fdeveloper%2Eateliershiori%2Emoe%2Feasynsurlconnection%2Fdocsets%2FEasyNSURLConnection%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -35,13 +35,25 @@
               <li class="nav-group-task">
                 <a href="../Classes/EasyNSURLConnection.html">EasyNSURLConnection</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@EasyNSURLConnectionVersionNumber">EasyNSURLConnectionVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@EasyNSURLConnectionVersionString">EasyNSURLConnectionVersionString</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@EasyNSURLDeleteMethod">EasyNSURLDeleteMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@EasyNSURLHeadMethod">EasyNSURLHeadMethod</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@EasyNSURLPatchMethod">EasyNSURLPatchMethod</a>
@@ -55,7 +67,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/JsonType.html">JsonType</a>
@@ -85,9 +97,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@useragent"></a>
-                    <a name="//apple_ref/objc/Ivar/useragent" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@useragent">useragent</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)useragent"></a>
+                    <a name="//apple_ref/objc/Property/useragent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)useragent">useragent</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -95,20 +107,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The user agent of the request. Example: <q>MAL Updater OS X 2.2.13 (Macintosh; Mac OS X 10.12.3; en_US)</q>
-- see: setUserAgent:</p>
+                        <p>The user agent of the request. Example: <q>MAL Updater OS X 2.2.13 (Macintosh; Mac OS X 10.12.3; en_US)</q></p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    setUserAgent:
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">useragent</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setUserAgent</span><span class="o">:</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">useragent</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">useragent</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L53">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -116,9 +137,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@postmethod"></a>
-                    <a name="//apple_ref/objc/Ivar/postmethod" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@postmethod">postmethod</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)postmethod"></a>
+                    <a name="//apple_ref/objc/Property/postmethod" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)postmethod">postmethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,12 +154,18 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">postmethod</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setPostMethod</span><span class="o">:</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">postmethod</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">postmethod</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L57">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -146,9 +173,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@headers"></a>
-                    <a name="//apple_ref/objc/Ivar/headers" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@headers">headers</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)headers"></a>
+                    <a name="//apple_ref/objc/Property/headers" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)headers">headers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -163,12 +190,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSMutableArray</span> <span class="o">*</span><span class="n">headers</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSMutableDictionary</span> <span class="o">*</span><span class="n">headers</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="kt">NSMutableDictionary</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L61">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -176,9 +208,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@formdata"></a>
-                    <a name="//apple_ref/objc/Ivar/formdata" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@formdata">formdata</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)formdata"></a>
+                    <a name="//apple_ref/objc/Property/formdata" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)formdata">formdata</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,12 +225,18 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSMutableArray</span> <span class="o">*</span><span class="n">formdata</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setFormData</span><span class="o">:</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span>
+    <span class="n">NSMutableDictionary</span> <span class="o">*</span><span class="n">formdata</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">formdata</span><span class="p">:</span> <span class="kt">NSMutableDictionary</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L65">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,9 +244,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@response"></a>
-                    <a name="//apple_ref/objc/Ivar/response" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@response">response</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)response"></a>
+                    <a name="//apple_ref/objc/Property/response" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)response">response</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -216,19 +254,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The request&rsquo;s Response.</p>
+                        <p>The request&rsquo;s response</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">response</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">getResponse</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="n">response</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">response</span><span class="p">:</span> <span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L69">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,39 +280,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@responsedata"></a>
-                    <a name="//apple_ref/objc/Ivar/responsedata" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@responsedata">responsedata</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The request&rsquo;s response data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSData</span> <span class="o">*</span><span class="n">responsedata</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L73">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@error"></a>
-                    <a name="//apple_ref/objc/Ivar/error" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@error">error</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)error"></a>
+                    <a name="//apple_ref/objc/Property/error" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)error">error</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -283,12 +297,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">getError</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L77">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -296,9 +315,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@URL"></a>
-                    <a name="//apple_ref/objc/Ivar/URL" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@URL">URL</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)URL"></a>
+                    <a name="//apple_ref/objc/Property/URL" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)URL">URL</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -313,12 +332,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">getURL</span><span class="p">,</span> <span class="n">setter</span><span class="o">=</span><span class="n">setURL</span><span class="o">:</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L81">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -326,9 +350,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection@usecookies"></a>
-                    <a name="//apple_ref/objc/Ivar/usecookies" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection@usecookies">usecookies</a>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)usecookies"></a>
+                    <a name="//apple_ref/objc/Property/usecookies" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)usecookies">usecookies</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -343,12 +367,121 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">BOOL</span> <span class="n">usecookies</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setUseCookies</span><span class="o">:</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">usecookies</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">usecookies</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L85">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)usejson"></a>
+                    <a name="//apple_ref/objc/Property/usejson" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)usejson">usejson</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property will make EasyURLConnection to send JSON data opposed to URL Encoded</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setuseJSON</span><span class="o">:</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">_Bool</span> <span class="n">usejson</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">usejson</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)jsontype"></a>
+                    <a name="//apple_ref/objc/Property/jsontype" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)jsontype">jsontype</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property sets the JSON type if usejson propertty is true or YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setJSONType</span><span class="o">:</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">int</span> <span class="n">jsontype</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">jsontype</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(py)jsonbody"></a>
+                    <a name="//apple_ref/objc/Property/jsonbody" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(py)jsonbody">jsonbody</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">setter</span><span class="o">=</span><span class="n">setJSONBody</span><span class="o">:</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">jsonbody</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">jsonbody</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,8 +499,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initalizes a EasyNSURLConnection instance.
-- returns: EasyNSURLConnection An instance of EasyNSURLConnection.</p>
+                        <p>Initalizes a EasyNSURLConnection instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -377,14 +509,18 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>EasyNSURLConnection An instance of EasyNSURLConnection.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L91">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -402,9 +538,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initalizes a EasyNSURLConnection instance with a URL.
-- parameter: address The URL of a request.
-- returns: EasyNSURLConnection An instance of EasyNSURLConnection.</p>
+                        <p>Initalizes a EasyNSURLConnection instance with a URL.</p>
 
                       </div>
                       <div class="declaration">
@@ -412,6 +546,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">address</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">url</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/EasyNSURLConnection.html#/c:objc(cs)EasyNSURLConnection(py)URL">URL</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -428,7 +567,6 @@
                               <td>
                                 <div>
                                   <p>The URL of a request.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -438,43 +576,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>EasyNSURLConnection An instance of EasyNSURLConnection.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L97">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)getResponseData"></a>
-                    <a name="//apple_ref/objc/Method/-getResponseData" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)getResponseData">-getResponseData</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retruns the data from a response as NSData.
-- returns: NSData The response data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="n">getResponseData</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>NSData The response data.</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L102">Show on GitHub</a>
@@ -495,8 +596,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Retruns the data from a response as a string.
-- returns: NSString The response data.</p>
+                        <p>Retruns the data from a response as a string.</p>
 
                       </div>
                       <div class="declaration">
@@ -506,14 +606,18 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getResponseDataString</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getResponseDataString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>NSString The response data.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L107">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,8 +635,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Convenience method to return a JSON response data as an NSArray or NSDictionary.
-- returns: id The pharsed response data.</p>
+                        <p>Convenience method to return a JSON response data as an NSArray or NSDictionary.</p>
 
                       </div>
                       <div class="declaration">
@@ -542,14 +645,18 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">getResponseDataJsonParsed</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getResponseDataJsonParsed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>id The pharsed response data.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L112">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -567,8 +674,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the status code of a request.
-- returns: int The status code of a request.</p>
+                        <p>Returns the status code of a request.</p>
 
                       </div>
                       <div class="declaration">
@@ -578,50 +684,18 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">getStatusCode</span><span class="p">;</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>int The status code of a request.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L117">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)getError"></a>
-                    <a name="//apple_ref/objc/Method/-getError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)getError">-getError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the error of an executed request.
-- returns: NSError The error of the executed request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="n">getError</span><span class="p">;</span></code></pre>
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getStatusCode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSError The error of the executed request.</p>
-
+                        <p>int The status code of a request.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L122">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -639,9 +713,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Allows you to add a HTTP header to a request.
-- parameter: object The value of the header.
-- parameter: key The name of the header.</p>
+                        <p>Allows you to add a HTTP header to a request.</p>
 
                       </div>
                       <div class="declaration">
@@ -649,6 +721,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addHeader</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span> <span class="nf">forKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addHeader</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -665,7 +742,6 @@
                               <td>
                                 <div>
                                   <p>The value of the header.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -678,7 +754,6 @@
                               <td>
                                 <div>
                                   <p>The name of the header.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -686,7 +761,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L128-L129">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L124-L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -704,9 +779,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Allows you to add a parameter containing data.
-- parameter: object The value of the parameter.
-- parameter: key The name of the parameter.</p>
+                        <p>Allows you to add a parameter containing data.</p>
 
                       </div>
                       <div class="declaration">
@@ -714,6 +787,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFormData</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span> <span class="nf">forKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addFormData</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -730,7 +808,6 @@
                               <td>
                                 <div>
                                   <p>The value of the parameter.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -743,7 +820,6 @@
                               <td>
                                 <div>
                                   <p>The name of the parameter.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -751,211 +827,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L135-L136">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)setUserAgent:"></a>
-                    <a name="//apple_ref/objc/Method/-setUserAgent:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)setUserAgent:">-setUserAgent:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows you to specify a custom User Agent
-- parameter: string The user agent.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setUserAgent</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">string</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>string</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The user agent.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L141">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)setUseCookies:"></a>
-                    <a name="//apple_ref/objc/Method/-setUseCookies:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)setUseCookies:">-setUseCookies:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows you to specify whether or not you should use existing cookies
-- parameter: choice Determines if a request should use cookies or not.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setUseCookies</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">choice</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>choice</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Determines if a request should use cookies or not.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L146">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)setURL:"></a>
-                    <a name="//apple_ref/objc/Method/-setURL:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)setURL:">-setURL:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets a URL
-- parameter: address Specifies a URL for the request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">address</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>address</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Specifies a URL for the request.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L151">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)EasyNSURLConnection(im)setPostMethod:"></a>
-                    <a name="//apple_ref/objc/Method/-setPostMethod:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)setPostMethod:">-setPostMethod:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows you to set the post method (e.g. POST, PUT, PATCH, DELETE). This is not required for GET requests.
-- parameter: method The method of the request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPostMethod</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">method</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>method</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The method of the request.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L156">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L131-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -983,9 +855,14 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startRequest</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startRequest</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L160">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L136">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1013,9 +890,14 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startFormRequest</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startFormRequest</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L164">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1033,9 +915,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts a JSON synchronous request with any JSON input. If aa post method is not specified, it will default to POST.
-- parameter: body The JSON data in string format.
-- parameter: bodytype The body type of the JSON data in the body. See JsonType Enums to see aviliable options.</p>
+                        <p>Starts a JSON synchronous request with any JSON input. If aa post method is not specified, it will default to POST.</p>
 
                       </div>
                       <div class="declaration">
@@ -1043,6 +923,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startJSONRequest</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">body</span> <span class="nf">type</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">bodytype</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startJSONRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">type</span> <span class="nv">bodytype</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1059,7 +944,6 @@
                               <td>
                                 <div>
                                   <p>The JSON data in string format.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1072,7 +956,6 @@
                               <td>
                                 <div>
                                   <p>The body type of the JSON data in the body. See JsonType Enums to see aviliable options.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1080,7 +963,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L170">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1098,8 +981,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts a JSON synchronous request with any JSON input. If aa post method is not specified, it will default to POST.
-- parameter: bodytype The body type of the JSON data in the body. See JsonType Enums to see aviliable options.</p>
+                        <p>Starts a JSON synchronous request with any JSON input. If aa post method is not specified, it will default to POST.</p>
 
                       </div>
                       <div class="declaration">
@@ -1107,6 +989,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startJSONFormRequest</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">bodytype</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startJSONFormRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">bodytype</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1123,7 +1010,6 @@
                               <td>
                                 <div>
                                   <p>The body type of the JSON data in the body. See JsonType Enums to see aviliable options.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1131,7 +1017,524 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L175">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L151">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(im)GET:headers:completion:error:"></a>
+                    <a name="//apple_ref/objc/Method/-GET:headers:completion:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)GET:headers:completion:error:">-GET:headers:completion:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a asynchronous GET request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">GET</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+       <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">headers</span>
+    <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span>
+         <span class="nf">error</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?,</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A url of a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The headers to add to a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request is successful. Block have an EasyNSURLResponse object as arguments and no return values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request fails. Block have an NSError and integer containing the HTTP status code and no return values;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L159">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(im)HEAD:parameters:headers:completion:error:"></a>
+                    <a name="//apple_ref/objc/Method/-HEAD:parameters:headers:completion:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)HEAD:parameters:headers:completion:error:">-HEAD:parameters:headers:completion:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a asynchronous HEAD request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">HEAD</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+    <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">param</span>
+       <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">headers</span>
+    <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span>
+         <span class="nf">error</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">head</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">parameters</span> <span class="nv">param</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?,</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A url of a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>param</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Contains parameters/form data of a request;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The headers to add to a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request is successful. Block have an EasyNSURLResponse object as arguments and no return values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request fails. Block have an NSError and integer containing the HTTP status code and no return values;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L168">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(im)POST:parameters:headers:completion:error:"></a>
+                    <a name="//apple_ref/objc/Method/-POST:parameters:headers:completion:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)POST:parameters:headers:completion:error:">-POST:parameters:headers:completion:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a asynchronous POST request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">POST</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+    <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">param</span>
+       <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">headers</span>
+    <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span>
+         <span class="nf">error</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">post</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">parameters</span> <span class="nv">param</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?,</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A url of a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>param</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Contains parameters/form data of a request;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The headers to add to a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request is successful. Block have an EasyNSURLResponse object as arguments and no return values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request fails. Block have an NSError and integer containing the HTTP status code and no return values;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L177">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(im)PATCH:parameters:headers:completion:error:"></a>
+                    <a name="//apple_ref/objc/Method/-PATCH:parameters:headers:completion:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)PATCH:parameters:headers:completion:error:">-PATCH:parameters:headers:completion:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a asynchronous PATCH request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">PATCH</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+    <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">param</span>
+       <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">headers</span>
+    <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span>
+         <span class="nf">error</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">patch</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">parameters</span> <span class="nv">param</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?,</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A url of a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>param</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Contains parameters/form data of a request;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The headers to add to a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request is successful. Block have an EasyNSURLResponse object as arguments and no return values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request fails. Block have an NSError and integer containing the HTTP status code and no return values;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L186">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)EasyNSURLConnection(im)DELETE:parameters:headers:completion:error:"></a>
+                    <a name="//apple_ref/objc/Method/-DELETE:parameters:headers:completion:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)EasyNSURLConnection(im)DELETE:parameters:headers:completion:error:">-DELETE:parameters:headers:completion:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a asynchronous DELETE request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">DELETE</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+    <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">param</span>
+       <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">headers</span>
+    <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span>
+         <span class="nf">error</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">parameters</span> <span class="nv">param</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/EasyNSURLResponse.html">EasyNSURLResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?,</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A url of a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>param</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Contains parameters/form data of a request;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The headers to add to a request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request is successful. Block have an EasyNSURLResponse object as arguments and no return values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block object that is executed when a request fails. Block have an NSError and integer containing the HTTP status code and no return values;</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLConnectionClass.h#L195">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1141,8 +1544,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-03-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-10-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

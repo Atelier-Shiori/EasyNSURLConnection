@@ -1,6 +1,6 @@
 # EasyNSURLConnection
 
-EasyNSURLConnection is a simple framework that allows one to easily create synchronous http requests. While this is not recommended since it freezes the application while a request is being made, sometimes making an asynchronous connection can make things too complicated.
+EasyNSURLConnection is a lightweight HTTP request framework that allows one to easily create synchronous and asynchronous http requests. While this is not recommended to use a synchronous request since it freezes the application while a request is being made, sometimes making an asynchronous connection can make things too complicated.
 
 This class uses NSURLSession as a replacement for "sendSynchronousRequest:returningResponse:error:".
 

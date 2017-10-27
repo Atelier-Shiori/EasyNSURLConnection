@@ -13,7 +13,7 @@
     <a title="EasyNSURLConnection  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">EasyNSURLConnection Docs</a> (94% documented)</p>
+        <p><a href="index.html">EasyNSURLConnection Docs</a> (88% documented)</p>
         <p class="header-right"><a href="https://github.com/Atelier-Shiori/EasyNSURLConnection"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fdeveloper%2Eateliershiori%2Emoe%2Feasynsurlconnection%2Fdocsets%2FEasyNSURLConnection%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -34,13 +34,25 @@
               <li class="nav-group-task">
                 <a href="Classes/EasyNSURLConnection.html">EasyNSURLConnection</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/EasyNSURLResponse.html">EasyNSURLResponse</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Constants.html#/c:@EasyNSURLConnectionVersionNumber">EasyNSURLConnectionVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@EasyNSURLConnectionVersionString">EasyNSURLConnectionVersionString</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Constants.html#/c:@EasyNSURLDeleteMethod">EasyNSURLDeleteMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@EasyNSURLHeadMethod">EasyNSURLHeadMethod</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@EasyNSURLPatchMethod">EasyNSURLPatchMethod</a>
@@ -54,7 +66,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/JsonType.html">JsonType</a>
@@ -75,20 +87,20 @@
         <section>
           <section class="section">
             
-            <a href='#easynsurlconnection' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='easynsurlconnection'>EasyNSURLConnection</h1>
+            <h1 id='easynsurlconnection' class='heading'>EasyNSURLConnection</h1>
 
-<p>EasyNSURLConnection is a simple framework that allows one to easily create synchronous http requests. While this is not recommended since it freezes the application while a request is being made, sometimes making an asynchronous connection can make things too complicated.</p>
+<p>EasyNSURLConnection is a lightweight HTTP request framework that allows one to easily create synchronous and asynchronous http requests. While this is not recommended to use a synchronous request since it freezes the application while a request is being made, sometimes making an asynchronous connection can make things too complicated.</p>
 
 <p>This class uses NSURLSession as a replacement for <q>sendSynchronousRequest:returningResponse:error:</q>.</p>
-<a href='#how-to-build' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how-to-build'>How to Build</h2>
+<h2 id='how-to-build' class='heading'>How to Build</h2>
 
 <ol>
 <li>You will need Xcode 8 or later to build this project</li>
 <li>Clone the repo</li>
 <li>Type xcodebuild to build the project</li>
 </ol>
-<a href='#how-to-use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how-to-use'>How to use</h2>
-<a href='#objective-c' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='objective-c'>Objective C</h3>
+<h2 id='how-to-use' class='heading'>How to use</h2>
+<h3 id='objective-c' class='heading'>Objective C</h3>
 
 <ol>
 <li>Copy the framework to your XCode Project</li>
@@ -98,34 +110,36 @@
 </code></li>
 </ol>
 
-<p>To use, simply do the following:
-&ldquo;`objective-c
-    // Create a request
-    NSURL *url = [NSURL URLWithString:@<q>https://google.com</q>];
+<p>To use, simply do the following:</p>
+<pre class="highlight plaintext"><code>    // Create a request
+    NSURL *url = [NSURL URLWithString:@"https://google.com"];
     EasyNSURLConnection *request = [[EasyNSURLConnection alloc] initWithURL:url];
     //Ignore Cookies
     [request setUseCookies:NO];
     // Add Form Data
-    [request addFormData:@<q>SomeData</q> forKey:@<q>Data</q>];
+    [request addFormData:@"SomeData" forKey:@"Data"];
     // Start Form Request
     [request startFormRequest];
     if ([request getStatusCode] == 200){
-        NSLog(@<q>%@</q>, [request getResponseData]);
+        NSLog(@"%@", [request getResponseData]);
     }
     else{
-        NSLog(@<q>Error: %@</q>, [request getError]);
-    }</p>
-<pre class="highlight plaintext"><code>
-## License
+        NSLog(@"Error: %@", [request getError]);
+    }
 
-EasyNSURLConnection is licensed under MIT License.
 </code></pre>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Documentation can be viewed <a href="https://developer.ateliershiori.moe/easynsurlconnection/index.html">here</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>EasyNSURLConnection is licensed under MIT License.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-03-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-10-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

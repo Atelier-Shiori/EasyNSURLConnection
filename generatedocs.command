@@ -8,7 +8,7 @@ jazzy \
   --github_url https://github.com/Atelier-Shiori/EasyNSURLConnection \
   --github-file-prefix hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0 \
   --module-version 1.0 \
-  --xcodebuild-arguments --objc,EasyNSURLConnection/EasyNSURLConnectionClass.h,--,-x,objective-c,-isysroot,$(xcrun --show-sdk-path),-I,$(pwd) \
+  --xcodebuild-arguments --objc,EasyNSURLConnection/EasyNSURLConnection.h,--,-x,objective-c,-isysroot,$(xcrun --show-sdk-path),-I,$(pwd) \
   --module EasyNSURLConnection \
   --root-url https://developer.ateliershiori.moe/easynsurlconnection/ \
   --output docs/
