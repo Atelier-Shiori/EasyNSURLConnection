@@ -77,7 +77,6 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
 -(void)startFormRequest {
     // Send a synchronous request
     [self setuprequest];
-    NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     // Set Method
     if (_postmethod.length != 0) {
         _request.HTTPMethod = _postmethod;
@@ -104,19 +103,19 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
 
 #pragma mark Async Request Methods
 - (void)GET:(NSString *)url headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    _url = [NSURL URLWithString:url];
+    _URL = [NSURL URLWithString:url];
     [self setuprequest];
     _request.HTTPMethod = @"GET";
     [_headers addEntriesFromDictionary:headers];
     [self setrequestheaders];
     [self performasyncrequest:^(EasyNSURLResponse *response) {
-        completion(responsse);
-    } error:^(NSError *error, int statuscode) {
-        error(error, statuscode);
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
     }];
 }
 - (void)HEAD:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    _url = [NSURL URLWithString:url];
+    _URL = [NSURL URLWithString:url];
     [self setuprequest];
     _request.HTTPMethod = EasyNSURLHeadMethod;
     [_headers addEntriesFromDictionary:headers];
@@ -124,13 +123,13 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [self setFormRequestData];
     [self setrequestheaders];
     [self performasyncrequest:^(EasyNSURLResponse *response) {
-        completion(responsse);
-    } error:^(NSError *error, int statuscode) {
-        error(error, statuscode);
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
     }];
 }
 - (void)POST:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    _url = [NSURL URLWithString:url];
+    _URL = [NSURL URLWithString:url];
     [self setuprequest];
     _request.HTTPMethod = EasyNSURLPostMethod;
     [_headers addEntriesFromDictionary:headers];
@@ -138,13 +137,13 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [self setFormRequestData];
     [self setrequestheaders];
     [self performasyncrequest:^(EasyNSURLResponse *response) {
-        completion(responsse);
-    } error:^(NSError *error, int statuscode) {
-        error(error, statuscode);
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
     }];
 }
 - (void)PATCH:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    _url = [NSURL URLWithString:url];
+    _URL = [NSURL URLWithString:url];
     [self setuprequest];
     _request.HTTPMethod = EasyNSURLPatchMethod;
     [_headers addEntriesFromDictionary:headers];
@@ -152,13 +151,13 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [self setFormRequestData];
     [self setrequestheaders];
     [self performasyncrequest:^(EasyNSURLResponse *response) {
-        completion(responsse);
-    } error:^(NSError *error, int statuscode) {
-        error(error, statuscode);
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
     }];
 }
 - (void)DELETE:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    _url = [NSURL URLWithString:url];
+    _URL = [NSURL URLWithString:url];
     [self setuprequest];
     _request.HTTPMethod = EasyNSURLDeleteMethod;
     [_headers addEntriesFromDictionary:headers];
@@ -166,9 +165,9 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [self setFormRequestData];
     [self setrequestheaders];
     [self performasyncrequest:^(EasyNSURLResponse *response) {
-        completion(responsse);
-    } error:^(NSError *error, int statuscode) {
-        error(error, statuscode);
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
     }];
 }
 
@@ -204,12 +203,12 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
 }
 - (void)performasyncrequest:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
+    [session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
         if (!eerror) {
             completion([[EasyNSURLResponse alloc] initWithData:taskData withResponse:(NSHTTPURLResponse *)rresponse withError:eerror]);
         }
         else {
-            error(eerrror, rresponse.statuscode);
+            error(eerror, ((NSHTTPURLResponse *)rresponse).statusCode);
         }
     }];
 }
@@ -239,6 +238,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [lock unlock];
 }
 - (void)setFormRequestData {
+    NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     // Set content type to form data
     if (_usejson) {
         // Set content type to form data
@@ -253,7 +253,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
         if (_jsonbody) {
             [lock lock];
             //Set Post Data
-            _request.HTTPBody = [body dataUsingEncoding:NSUTF8StringEncoding];
+            _request.HTTPBody = [_jsonbody dataUsingEncoding:NSUTF8StringEncoding];
             [lock unlock];
         }
         else {
@@ -272,7 +272,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     else {
         [_request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         //Set Post Data
-        [lock lock]
+        [lock lock];
         _request.HTTPBody = [self encodeDictionaries:_formdata];
         [lock unlock];
     }
