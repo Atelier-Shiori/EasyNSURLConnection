@@ -4,10 +4,13 @@
 //  Created by Nanoha Takamachi on 2014/11/25.
 //  Copyright (c) 2014年 Atelier Shiori. Licensed under MIT License.
 //
-//  This class allows easy access to NSURLConnection Functions
+//  This class allows easy creation of synchronous and asynchronous request using NSURLSession
 //
 
 #import <Foundation/Foundation.h>
+/**
+     This class allows easy creation of synchronous and asynchronous request using NSURLSession
+ */
 @class EasyNSURLResponse;
 /** 
 	This defines the body types of a JSON request.

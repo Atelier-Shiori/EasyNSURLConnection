@@ -4,7 +4,7 @@
 //  Created by Nanoha Takamachi on 2014/11/25.
 //  Copyright (c) 2014年 Atelier Shiori. Licensed under MIT License.
 //
-//  This class allows easy creation of synchronous and asynchronous request using NSURLSession
+//  This class allows easy creation of synchronous and asynchronous request using NSURLSession.
 //
 
 #import "EasyNSURLConnection.h"
@@ -38,7 +38,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     return [_response getResponseDataString];
 }
 -(id)getResponseDataJsonParsed {
-    return [NSJSONSerialization JSONObjectWithData:[_response getData] options:0 error:nil];
+    return [_response getResponseDataJsonParsed];
 }
 -(long)getStatusCode {
     return [_response getStatusCode];
@@ -208,16 +208,29 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
             completion([[EasyNSURLResponse alloc] initWithData:taskData withResponse:(NSHTTPURLResponse *)rresponse withError:eerror]);
         }
         else {
-            error(eerror, ((NSHTTPURLResponse *)rresponse).statusCode);
+            error(eerror, (int)((NSHTTPURLResponse *)rresponse).statusCode);
         }
     }];
 }
 - (void)setAllHeaders {
     if (_headers != nil) {
-        for (NSString *key in _headers.allKeys ) {
-            //Set any headers
-            [_request setValue:_headers[key] forHTTPHeaderField:key];
+        _request.allHTTPHeaderFields = _headers;
+    }
+    // Set User Agent
+    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
+    // Set Body Type
+    if (_usejson) {
+        switch (_jsontype){
+            case 0:
+                [_request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                break;
+            case 1:
+                [_request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
+                break;
         }
+    }
+    else {
+        [_request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     }
 }
 - (void)setuprequest {
@@ -227,8 +240,6 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     _request.HTTPShouldHandleCookies = _usecookies;
     // Set Timeout
     _request.timeoutInterval = 15;
-    // Set User Agent
-    [_request setValue:_useragent forHTTPHeaderField:@"User-Agent"];
 }
 - (void)setrequestheaders {
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
@@ -242,14 +253,6 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     // Set content type to form data
     if (_usejson) {
         // Set content type to form data
-        switch (_jsontype){
-            case 0:
-                [_request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-                break;
-            case 1:
-                [_request setValue:@"application/vnd.api+json" forHTTPHeaderField:@"Content-Type"];
-                break;
-        }
         if (_jsonbody) {
             [lock lock];
             //Set Post Data
@@ -270,7 +273,6 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
         }
     }
     else {
-        [_request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         //Set Post Data
         [lock lock];
         _request.HTTPBody = [self encodeDictionaries:_formdata];

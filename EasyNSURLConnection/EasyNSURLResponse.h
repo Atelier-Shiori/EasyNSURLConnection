@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ This class specifies the response object when a request is done.
+ */
 @interface EasyNSURLResponse : NSObject
 /**
  The request's response data.
@@ -21,6 +23,9 @@
  The request's Response.
  */
 @property (nonatomic, copy, getter=getResponse) NSHTTPURLResponse * response;
+/**
+ Initalizes aa request object. Not to be called by the user.
+ */
 - (id)initWithData:(NSData *)rdata withResponse:(NSHTTPURLResponse *)rresponse withError:(NSError*)eerror;
 /**
  Retruns the data from a response as a string.
