@@ -14,7 +14,7 @@
     <a title="EasyNSURLResponse Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">EasyNSURLConnection Docs</a> (88% documented)</p>
+        <p><a href="../index.html">EasyNSURLConnection Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/Atelier-Shiori/EasyNSURLConnection"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fdeveloper%2Eateliershiori%2Emoe%2Feasynsurlconnection%2Fdocsets%2FEasyNSURLConnection%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -88,7 +88,13 @@
         <section>
           <section class="section">
             <h1>EasyNSURLResponse</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">EasyNSURLResponse</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class specifies the response object when a request is done.</p>
 
           </section>
           <section class="section task-group-section">
@@ -124,7 +130,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L15">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -159,7 +165,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L19">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -195,7 +201,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L23">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -213,11 +219,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initalizes aa request object. Not to be called by the user.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">rdata</span>
+      <span class="nf">withResponse</span><span class="p">:(</span><span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="p">)</span><span class="nv">rresponse</span>
+         <span class="nf">withError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">eerror</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">data</span> <span class="nv">rdata</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">,</span> <span class="n">with</span> <span class="nv">rresponse</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="o">!</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">eerror</span><span class="p">:</span> <span class="kt">Error</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,7 +277,7 @@
                         <p>NSString The response data.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L29">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,7 +316,7 @@
                         <p>id The pharsed response data.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L34">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,7 +355,7 @@
                         <p>int The status code of a request.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L39">Show on GitHub</a>
+                        <a href="hhttps://github.com/Atelier-Shiori/EasyNSURLConnection/tree/v1.0/EasyNSURLConnection/EasyNSURLResponse.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -344,7 +365,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-10-27)</p>
+          <p>&copy; 2017 <a class="link" href="https://ateliershiori.moe" target="_blank" rel="external">Atelier Shiori</a>. All rights reserved. (Last updated: 2017-10-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -2,30 +2,16 @@
   "warnings": [
     {
       "file": "/Volumes/MacStorage/EasyNSURLConnection/EasyNSURLConnection/EasyNSURLConnectionClass.h",
-      "line": 15,
+      "line": 18,
       "symbol": "EasyNSURLConnectionJsonTypes",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/Volumes/MacStorage/EasyNSURLConnection/EasyNSURLConnection/EasyNSURLConnectionClass.h",
-      "line": 47,
+      "line": 50,
       "symbol": "EasyNSURLConnection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/MacStorage/EasyNSURLConnection/EasyNSURLConnection/EasyNSURLResponse.h",
-      "line": 11,
-      "symbol": "EasyNSURLResponse",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/MacStorage/EasyNSURLConnection/EasyNSURLConnection/EasyNSURLResponse.h",
-      "line": 24,
-      "symbol": "EasyNSURLResponse.-initWithData:withResponse:withError:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {

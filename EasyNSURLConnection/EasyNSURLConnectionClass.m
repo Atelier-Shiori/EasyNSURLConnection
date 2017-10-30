@@ -82,7 +82,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
         _request.HTTPMethod = _postmethod;
     }
     else {
-        _request.HTTPMethod = @"POST";
+        _request.HTTPMethod = EasyNSURLPostMethod;
     }
     [self setFormRequestData];
     // Set Other headers, if any
