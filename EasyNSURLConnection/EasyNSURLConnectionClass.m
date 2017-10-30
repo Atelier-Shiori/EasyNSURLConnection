@@ -206,14 +206,14 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
 }
 - (void)performasyncrequest:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
     NSURLSession *session = [NSURLSession sharedSession];
-    [session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
+    [[session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
         if (!eerror) {
             completion([[EasyNSURLResponse alloc] initWithData:taskData withResponse:(NSHTTPURLResponse *)rresponse withError:eerror]);
         }
         else {
             error(eerror, (int)((NSHTTPURLResponse *)rresponse).statusCode);
         }
-    }];
+    }] resume];
 }
 - (void)setAllHeaders {
     if (_headers != nil) {
