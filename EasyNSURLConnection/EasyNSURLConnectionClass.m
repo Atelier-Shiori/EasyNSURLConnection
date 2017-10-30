@@ -252,6 +252,9 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     [lock unlock];
 }
 - (void)setFormRequestData {
+    if (!_formdata) {
+        return;
+    }
     NSLock * lock = [NSLock new]; // NSMutableArray is not Thread Safe, lock before performing operation
     // Set content type to form data
     if (_usejson) {
