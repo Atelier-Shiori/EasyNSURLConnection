@@ -27,6 +27,9 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
 -(id)init {
     // Set Default User Agent
     _useragent = [NSString stringWithFormat:@"%@ %@ (Macintosh; Mac OS X %@; %@)", [NSBundle mainBundle].infoDictionary[@"CFBundleName"],[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"], [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"][@"ProductVersion"], [NSLocale currentLocale].localeIdentifier];
+    // Init dictionaries
+    _headers = [NSMutableDictionary new];
+    _formdata = [NSMutableDictionary new];
     return [super init];
 }
 -(id)initWithURL:(NSURL *)address {
