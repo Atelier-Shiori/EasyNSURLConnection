@@ -7,14 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D06DF7D1FA77D5300383684 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D06DF7C1FA77D5300383684 /* AppDelegate.m */; };
+		2D06DF7F1FA77D5300383684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D06DF7E1FA77D5300383684 /* Assets.xcassets */; };
+		2D06DF821FA77D5300383684 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D06DF801FA77D5300383684 /* MainMenu.xib */; };
+		2D06DF851FA77D5300383684 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D06DF841FA77D5300383684 /* main.m */; };
 		2D27A4501E6A15FD00D4C63B /* EasyNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D27A44D1E6A15FD00D4C63B /* EasyNSURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D27A4511E6A15FD00D4C63B /* EasyNSURLConnectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D27A44E1E6A15FD00D4C63B /* EasyNSURLConnectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D27A4521E6A15FD00D4C63B /* EasyNSURLConnectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D27A44F1E6A15FD00D4C63B /* EasyNSURLConnectionClass.m */; };
+		2D2B5D421FA77F37005D4B7D /* EasyNSURLConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C3AC61E6A038F007D8F68 /* EasyNSURLConnection.framework */; };
+		2D2B5D431FA77F37005D4B7D /* EasyNSURLConnection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C3AC61E6A038F007D8F68 /* EasyNSURLConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D9C3AE61E6A0D00007D8F68 /* EasyNSURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9C3AE41E6A0D00007D8F68 /* EasyNSURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D9C3AE71E6A0D00007D8F68 /* EasyNSURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C3AE51E6A0D00007D8F68 /* EasyNSURLResponse.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D2B5D441FA77F37005D4B7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D9C3ABD1E6A038F007D8F68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D9C3AC51E6A038F007D8F68;
+			remoteInfo = EasyNSURLConnection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D2B5D461FA77F37005D4B7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D2B5D431FA77F37005D4B7D /* EasyNSURLConnection.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2D06DF791FA77D5300383684 /* EasyNSURLConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyNSURLConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D06DF7B1FA77D5300383684 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D06DF7C1FA77D5300383684 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D06DF7E1FA77D5300383684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D06DF811FA77D5300383684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2D06DF831FA77D5300383684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D06DF841FA77D5300383684 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D06DF861FA77D5300383684 /* EasyNSURLConnectionSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyNSURLConnectionSample.entitlements; sourceTree = "<group>"; };
 		2D27A44D1E6A15FD00D4C63B /* EasyNSURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyNSURLConnection.h; sourceTree = "<group>"; };
 		2D27A44E1E6A15FD00D4C63B /* EasyNSURLConnectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyNSURLConnectionClass.h; sourceTree = "<group>"; };
 		2D27A44F1E6A15FD00D4C63B /* EasyNSURLConnectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyNSURLConnectionClass.m; sourceTree = "<group>"; };
@@ -25,6 +63,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D06DF761FA77D5300383684 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2B5D421FA77F37005D4B7D /* EasyNSURLConnection.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D9C3AC21E6A038F007D8F68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D06DF7A1FA77D5300383684 /* EasyNSURLConnectionSample */ = {
+			isa = PBXGroup;
+			children = (
+				2D06DF7B1FA77D5300383684 /* AppDelegate.h */,
+				2D06DF7C1FA77D5300383684 /* AppDelegate.m */,
+				2D06DF7E1FA77D5300383684 /* Assets.xcassets */,
+				2D06DF801FA77D5300383684 /* MainMenu.xib */,
+				2D06DF831FA77D5300383684 /* Info.plist */,
+				2D06DF841FA77D5300383684 /* main.m */,
+				2D06DF861FA77D5300383684 /* EasyNSURLConnectionSample.entitlements */,
+			);
+			path = EasyNSURLConnectionSample;
+			sourceTree = "<group>";
+		};
 		2D9C3ABC1E6A038F007D8F68 = {
 			isa = PBXGroup;
 			children = (
 				2D9C3AC81E6A038F007D8F68 /* EasyNSURLConnection */,
+				2D06DF7A1FA77D5300383684 /* EasyNSURLConnectionSample */,
 				2D9C3AC71E6A038F007D8F68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9C3AC61E6A038F007D8F68 /* EasyNSURLConnection.framework */,
+				2D06DF791FA77D5300383684 /* EasyNSURLConnectionSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +142,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2D06DF781FA77D5300383684 /* EasyNSURLConnectionSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D06DF891FA77D5300383684 /* Build configuration list for PBXNativeTarget "EasyNSURLConnectionSample" */;
+			buildPhases = (
+				2D06DF751FA77D5300383684 /* Sources */,
+				2D06DF761FA77D5300383684 /* Frameworks */,
+				2D06DF771FA77D5300383684 /* Resources */,
+				2D2B5D461FA77F37005D4B7D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D2B5D451FA77F37005D4B7D /* PBXTargetDependency */,
+			);
+			name = EasyNSURLConnectionSample;
+			productName = EasyNSURLConnectionSample;
+			productReference = 2D06DF791FA77D5300383684 /* EasyNSURLConnectionSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2D9C3AC51E6A038F007D8F68 /* EasyNSURLConnection */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D9C3ACE1E6A038F007D8F68 /* Build configuration list for PBXNativeTarget "EasyNSURLConnection" */;
@@ -107,6 +188,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Atelier Shiori";
 				TargetAttributes = {
+					2D06DF781FA77D5300383684 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 					2D9C3AC51E6A038F007D8F68 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 9HDZTER525;
@@ -120,6 +210,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2D9C3ABC1E6A038F007D8F68;
 			productRefGroup = 2D9C3AC71E6A038F007D8F68 /* Products */;
@@ -127,11 +218,21 @@
 			projectRoot = "";
 			targets = (
 				2D9C3AC51E6A038F007D8F68 /* EasyNSURLConnection */,
+				2D06DF781FA77D5300383684 /* EasyNSURLConnectionSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D06DF771FA77D5300383684 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D06DF7F1FA77D5300383684 /* Assets.xcassets in Resources */,
+				2D06DF821FA77D5300383684 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D9C3AC41E6A038F007D8F68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +243,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D06DF751FA77D5300383684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D06DF851FA77D5300383684 /* main.m in Sources */,
+				2D06DF7D1FA77D5300383684 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D9C3AC11E6A038F007D8F68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,7 +263,72 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2D2B5D451FA77F37005D4B7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D9C3AC51E6A038F007D8F68 /* EasyNSURLConnection */;
+			targetProxy = 2D2B5D441FA77F37005D4B7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D06DF801FA77D5300383684 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D06DF811FA77D5300383684 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2D06DF871FA77D5300383684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EasyNSURLConnectionSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.ateliershiori.EasyNSURLConnectionSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D06DF881FA77D5300383684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EasyNSURLConnectionSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.ateliershiori.EasyNSURLConnectionSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2D9C3ACC1E6A038F007D8F68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -255,7 +430,6 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9HDZTER525;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -276,7 +450,6 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9HDZTER525;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -294,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D06DF891FA77D5300383684 /* Build configuration list for PBXNativeTarget "EasyNSURLConnectionSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D06DF871FA77D5300383684 /* Debug */,
+				2D06DF881FA77D5300383684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D9C3AC01E6A038F007D8F68 /* Build configuration list for PBXProject "EasyNSURLConnection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

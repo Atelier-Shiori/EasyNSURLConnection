@@ -12,6 +12,7 @@
 
 @interface EasyNSURLConnection ()
 @property (strong) NSMutableURLRequest *request;
+@property (strong) NSURLSession *session;
 @end
 
 @implementation EasyNSURLConnection
@@ -30,6 +31,8 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     // Init dictionaries
     _headers = [NSMutableDictionary new];
     _formdata = [NSMutableDictionary new];
+    // Init session manager
+    _session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
     return [super init];
 }
 -(id)initWithURL:(NSURL *)address {
@@ -192,8 +195,7 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     __block NSData *data = nil;
     __block NSError * error2 = nil;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
         data = taskData;
         urlresponse = (NSHTTPURLResponse *)rresponse;
         error2 = eerror;
@@ -205,14 +207,15 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
     return [[EasyNSURLResponse alloc] initWithData:data withResponse:urlresponse withError:error2];
 }
 - (void)performasyncrequest:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
-    NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
-        if (!eerror) {
-            completion([[EasyNSURLResponse alloc] initWithData:taskData withResponse:(NSHTTPURLResponse *)rresponse withError:eerror]);
-        }
-        else {
-            error(eerror, (int)((NSHTTPURLResponse *)rresponse).statusCode);
-        }
+    [[_session dataTaskWithRequest:_request completionHandler:^(NSData *taskData, NSURLResponse *rresponse, NSError *eerror) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!eerror) {
+                completion([[EasyNSURLResponse alloc] initWithData:taskData withResponse:(NSHTTPURLResponse *)rresponse withError:eerror]);
+            }
+            else {
+                error(eerror, (int)((NSHTTPURLResponse *)rresponse).statusCode);
+            }
+        });
     }] resume];
 }
 - (void)setAllHeaders {
