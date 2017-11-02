@@ -162,6 +162,20 @@ NSString * const EasyNSURLDeleteMethod = @"DELETE";
         error(eerror, statuscode);
     }];
 }
+- (void)PUT:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
+    _URL = [NSURL URLWithString:url];
+    [self setuprequest];
+    _request.HTTPMethod = EasyNSURLPutMethod;
+    [_headers addEntriesFromDictionary:headers];
+    [_formdata addEntriesFromDictionary:param];
+    [self setFormRequestData];
+    [self setrequestheaders];
+    [self performasyncrequest:^(EasyNSURLResponse *response) {
+        completion(response);
+    } error:^(NSError *eerror, int statuscode) {
+        error(eerror, statuscode);
+    }];
+}
 - (void)DELETE:(NSString *)url parameters:(NSDictionary *)param headers:(NSDictionary *)headers completion:(void (^)(EasyNSURLResponse *response))completion error:(void (^)(NSError *error, int statuscode))error {
     _URL = [NSURL URLWithString:url];
     [self setuprequest];
